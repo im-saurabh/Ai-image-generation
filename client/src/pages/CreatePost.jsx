@@ -21,7 +21,7 @@ const CreatePost = () => {
     if(form.prompt) {
       try{
         setGeneratingImg(true);
-        const response = await fetch('https://ai-image-generator-cqw2.onrender.com',
+        const response = await fetch('https://ai-image-generator-cqw2.onrender.com/api/v1/Leo',
         {
           method: 'POST',
           headers: {
@@ -50,7 +50,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('https://ai-image-generator-cqw2.onrender.com', {
+        const response = await fetch('https://ai-image-generator-cqw2.onrender.com/api/v1/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
